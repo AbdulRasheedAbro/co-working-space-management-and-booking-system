@@ -1,0 +1,353 @@
+/* ============================================================
+   TIME Co-working — Login (Emerald theme)
+   Place at: src/main/resources/css/login.css
+
+   RE-THEMING: change only the colour variables in .login-root below.
+   ============================================================ */
+
+.login-root {
+    /* ── Theme variables ── */
+    -brand-dark:    #022c22;   /* darkest brand tone            */
+    -brand-mid:     #065f46;   /* middle of brand gradient      */
+    -brand-light:   #0d9488;   /* lightest brand tone           */
+    -accent:        #0d9488;   /* buttons, focus, links         */
+    -accent-dark:   #047857;   /* button gradient end / hover   */
+    -accent-soft:   #ccfbf1;   /* soft tint (hover backgrounds) */
+    -gold:          #fbbf24;   /* highlight colour              */
+    -ink:           #0f172a;   /* main text                     */
+    -muted:         #64748b;   /* secondary text                */
+    -surface:       #ffffff;   /* form panel background         */
+    -field:         #f1f5f9;   /* input background              */
+    -line:          #e2e8f0;   /* borders                       */
+
+    -fx-background-color: -surface;
+    -fx-font-family: "Segoe UI", "Inter", "Helvetica Neue", Arial, sans-serif;
+}
+
+/* ───────────── Brand panel (left) ───────────── */
+
+.brand-panel {
+    -fx-background-color: linear-gradient(from 0% 0% to 100% 100%, -brand-dark 0%, -brand-mid 55%, -brand-light 100%);
+}
+
+.brand-content {
+    -fx-padding: 40 44 30 44;
+}
+
+.brand-circle {
+    -fx-fill: rgba(255, 255, 255, 0.07);
+}
+
+.brand-circle-gold {
+    -fx-fill: rgba(251, 191, 36, 0.30);
+}
+
+.brand-logo {
+    -fx-background-color: linear-gradient(from 0% 0% to 100% 100%, #fde68a, -gold);
+    -fx-background-radius: 14;
+    -fx-min-width: 46;
+    -fx-min-height: 46;
+    -fx-pref-width: 46;
+    -fx-pref-height: 46;
+    -fx-max-width: 46;
+    -fx-max-height: 46;
+    -fx-effect: dropshadow(gaussian, rgba(251, 191, 36, 0.45), 18, 0.1, 0, 4);
+}
+
+.brand-logo-text {
+    -fx-text-fill: -brand-dark;
+    -fx-font-size: 24px;
+    -fx-font-weight: 900;
+}
+
+.brand-name {
+    -fx-text-fill: white;
+    -fx-font-size: 18px;
+    -fx-font-weight: 700;
+}
+
+/* Live clock chip */
+.clock-chip {
+    -fx-background-color: rgba(255, 255, 255, 0.12);
+    -fx-background-radius: 20;
+    -fx-border-color: rgba(255, 255, 255, 0.22);
+    -fx-border-radius: 20;
+    -fx-padding: 6 14 6 12;
+}
+
+.live-dot {
+    -fx-fill: #4ade80;
+    -fx-effect: dropshadow(gaussian, #4ade80, 8, 0.4, 0, 0);
+}
+
+.clock-text {
+    -fx-text-fill: rgba(255, 255, 255, 0.90);
+    -fx-font-size: 12px;
+    -fx-font-weight: 600;
+}
+
+.brand-headline {
+    -fx-text-fill: white;
+    -fx-font-size: 33px;
+    -fx-font-weight: 800;
+    -fx-line-spacing: 2;
+}
+
+.brand-tagline {
+    -fx-text-fill: rgba(255, 255, 255, 0.78);
+    -fx-font-size: 14px;
+    -fx-max-width: 320;
+}
+
+.brand-feature-row {
+    -fx-background-color: rgba(255, 255, 255, 0.10);
+    -fx-background-radius: 12;
+    -fx-border-color: rgba(255, 255, 255, 0.10);
+    -fx-border-radius: 12;
+    -fx-padding: 9 14 9 12;
+}
+
+.brand-feature-dot {
+    -fx-background-color: -gold;
+    -fx-background-radius: 12;
+    -fx-text-fill: -brand-dark;
+    -fx-font-size: 12px;
+    -fx-font-weight: 900;
+}
+
+.brand-feature {
+    -fx-text-fill: white;
+    -fx-font-size: 13.5px;
+    -fx-font-weight: 600;
+}
+
+.brand-footer {
+    -fx-text-fill: rgba(255, 255, 255, 0.60);
+    -fx-font-size: 12px;
+}
+
+/* ───────────── Form panel (right) ───────────── */
+
+.form-panel {
+    -fx-background-color: -surface;
+    -fx-padding: 40;
+}
+
+.form-greeting {
+    -fx-text-fill: -accent;
+    -fx-font-size: 12px;
+    -fx-font-weight: 800;
+    -fx-letter-spacing: 2;
+}
+
+.form-title {
+    -fx-text-fill: -ink;
+    -fx-font-size: 31px;
+    -fx-font-weight: 800;
+}
+
+.form-subtitle {
+    -fx-text-fill: -muted;
+    -fx-font-size: 14px;
+}
+
+.field-label {
+    -fx-text-fill: #334155;
+    -fx-font-size: 13px;
+    -fx-font-weight: 700;
+}
+
+/* Inputs */
+.login-input {
+    -fx-background-color: -field;
+    -fx-background-radius: 12;
+    -fx-border-color: -line;
+    -fx-border-radius: 12;
+    -fx-border-width: 1.5;
+    -fx-padding: 0 14 0 14;
+    -fx-pref-height: 48;
+    -fx-min-height: 48;
+    -fx-font-size: 14px;
+    -fx-text-fill: -ink;
+    -fx-prompt-text-fill: #94a3b8;
+    -fx-highlight-fill: #99f6e4;
+    -fx-highlight-text-fill: -ink;
+}
+
+.login-input.icon-input {
+    -fx-padding: 0 14 0 46;
+}
+
+.login-input.password-input {
+    -fx-padding: 0 70 0 46;
+}
+
+.login-input:hover {
+    -fx-background-color: #e8eef5;
+}
+
+.login-input:focused {
+    -fx-background-color: white;
+    -fx-border-color: -accent;
+    -fx-effect: dropshadow(gaussian, rgba(13, 148, 136, 0.30), 12, 0.1, 0, 0);
+}
+
+.login-input:disabled {
+    -fx-opacity: 0.6;
+}
+
+/* Icons */
+.field-icon {
+    -fx-background-color: #94a3b8;
+    -fx-scale-shape: true;
+}
+
+.icon-user {
+    -fx-shape: "M12 12c2.21 0 4-1.79 4-4s-1.79-4-4-4-4 1.79-4 4 1.79 4 4 4zm0 2c-2.67 0-8 1.34-8 4v2h16v-2c0-2.66-5.33-4-8-4z";
+}
+
+.icon-lock {
+    -fx-shape: "M18 8h-1V6c0-2.76-2.24-5-5-5S7 3.24 7 6v2H6c-1.1 0-2 .9-2 2v10c0 1.1.9 2 2 2h12c1.1 0 2-.9 2-2V10c0-1.1-.9-2-2-2zm-6 9c-1.1 0-2-.9-2-2s.9-2 2-2 2 .9 2 2-.9 2-2 2zm3.1-9H8.9V6c0-1.71 1.39-3.1 3.1-3.1 1.71 0 3.1 1.39 3.1 3.1v2z";
+}
+
+/* Show / Hide */
+.toggle-pass {
+    -fx-background-color: transparent;
+    -fx-text-fill: -accent;
+    -fx-font-size: 12.5px;
+    -fx-font-weight: 700;
+    -fx-padding: 6 10 6 10;
+    -fx-background-radius: 8;
+    -fx-cursor: hand;
+}
+
+.toggle-pass:hover {
+    -fx-background-color: -accent-soft;
+}
+
+/* Remember me */
+.remember {
+    -fx-text-fill: #475569;
+    -fx-font-size: 13px;
+    -fx-font-weight: 600;
+    -fx-cursor: hand;
+}
+
+.remember .box {
+    -fx-background-color: white;
+    -fx-background-radius: 6;
+    -fx-border-color: #cbd5e1;
+    -fx-border-radius: 6;
+    -fx-border-width: 1.5;
+    -fx-padding: 3;
+}
+
+.remember:hover .box {
+    -fx-border-color: -accent;
+}
+
+.remember:selected .box {
+    -fx-background-color: -accent;
+    -fx-border-color: -accent;
+}
+
+.remember .mark {
+    -fx-background-color: white;
+}
+
+.link-small {
+    -fx-background-color: transparent;
+    -fx-text-fill: -accent;
+    -fx-font-size: 13px;
+    -fx-font-weight: 700;
+    -fx-cursor: hand;
+    -fx-padding: 4 6 4 6;
+    -fx-background-radius: 6;
+}
+
+.link-small:hover {
+    -fx-background-color: -accent-soft;
+}
+
+/* Error banner */
+.error-box {
+    -fx-background-color: #fef2f2;
+    -fx-background-radius: 10;
+    -fx-border-color: #fecaca;
+    -fx-border-radius: 10;
+    -fx-padding: 10 12 10 12;
+}
+
+.error-icon {
+    -fx-background-color: #ef4444;
+    -fx-background-radius: 10;
+    -fx-text-fill: white;
+    -fx-font-size: 12px;
+    -fx-font-weight: 800;
+    -fx-pref-width: 20;
+    -fx-pref-height: 20;
+}
+
+.error-text {
+    -fx-text-fill: #b91c1c;
+    -fx-font-size: 13px;
+    -fx-font-weight: 600;
+}
+
+/* Buttons */
+.primary-button {
+    -fx-background-color: linear-gradient(to right, -accent, -accent-dark);
+    -fx-background-radius: 12;
+    -fx-text-fill: white;
+    -fx-font-size: 15px;
+    -fx-font-weight: 700;
+    -fx-pref-height: 50;
+    -fx-min-height: 50;
+    -fx-cursor: hand;
+    -fx-effect: dropshadow(gaussian, rgba(13, 148, 136, 0.40), 16, 0.15, 0, 6);
+}
+
+.primary-button:hover {
+    -fx-background-color: linear-gradient(to right, #0f766e, #065f46);
+    -fx-effect: dropshadow(gaussian, rgba(13, 148, 136, 0.55), 22, 0.2, 0, 8);
+    -fx-translate-y: -1;
+}
+
+.primary-button:pressed {
+    -fx-translate-y: 1;
+    -fx-effect: dropshadow(gaussian, rgba(13, 148, 136, 0.30), 8, 0.1, 0, 3);
+}
+
+.primary-button:disabled {
+    -fx-opacity: 0.75;
+}
+
+.link-button {
+    -fx-background-color: transparent;
+    -fx-text-fill: -muted;
+    -fx-font-size: 13px;
+    -fx-font-weight: 600;
+    -fx-cursor: hand;
+    -fx-padding: 8 14 8 14;
+    -fx-background-radius: 8;
+}
+
+.link-button:hover {
+    -fx-text-fill: -ink;
+    -fx-background-color: -field;
+}
+
+.primary-button:focused,
+.link-button:focused,
+.toggle-pass:focused,
+.link-small:focused {
+    -fx-background-insets: 0;
+}
+
+/* Footer note */
+.secure-note {
+    -fx-text-fill: #94a3b8;
+    -fx-font-size: 12px;
+    -fx-alignment: center;
+    -fx-text-alignment: center;
+}

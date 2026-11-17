@@ -1,0 +1,223 @@
+/* ============================================================
+   TIME Co-working — Payments (Emerald theme)
+   ============================================================ */
+
+.pay-root {
+    -brand-dark:  #022c22;
+    -brand-mid:   #065f46;
+    -brand-light: #0d9488;
+    -accent:      #0d9488;
+    -accent-dark: #047857;
+    -accent-soft: #ccfbf1;
+    -gold:        #fbbf24;
+    -ink:         #0f172a;
+    -muted:       #64748b;
+    -line:        #e2e8f0;
+    -fx-font-family: "Segoe UI", "Inter", "Helvetica Neue", Arial, sans-serif;
+}
+
+.pay-hero {
+    -fx-background-color: linear-gradient(from 0% 0% to 100% 100%, -brand-dark 0%, -brand-mid 55%, -brand-light 100%);
+    -fx-background-radius: 16;
+    -fx-effect: dropshadow(gaussian, rgba(6, 95, 70, 0.30), 18, 0.1, 0, 6);
+}
+
+.pay-hero-content { -fx-padding: 0 30 0 30; }
+.pay-circle      { -fx-fill: rgba(255, 255, 255, 0.07); }
+.pay-circle-gold { -fx-fill: rgba(251, 191, 36, 0.30); }
+
+.pay-hero-eyebrow { -fx-text-fill: -gold; -fx-font-size: 12px; -fx-font-weight: 800; }
+.pay-hero-headline { -fx-text-fill: white; -fx-font-size: 28px; -fx-font-weight: 800; }
+.pay-hero-subtitle { -fx-text-fill: rgba(255, 255, 255, 0.78); -fx-font-size: 13.5px; }
+
+.pay-stat {
+    -fx-background-color: rgba(255, 255, 255, 0.12);
+    -fx-background-radius: 14;
+    -fx-border-color: rgba(255, 255, 255, 0.22);
+    -fx-border-radius: 14;
+    -fx-padding: 10 20 10 20;
+    -fx-min-width: 96;
+}
+.pay-stat-value { -fx-text-fill: white; -fx-font-size: 22px; -fx-font-weight: 800; }
+.pay-stat-caption { -fx-text-fill: rgba(255, 255, 255, 0.72); -fx-font-size: 10.5px; -fx-font-weight: 700; }
+
+.pay-toolbar {
+    -fx-background-color: white;
+    -fx-background-radius: 14;
+    -fx-border-color: -line;
+    -fx-border-radius: 14;
+    -fx-padding: 12 16 12 16;
+    -fx-effect: dropshadow(gaussian, rgba(15, 23, 42, 0.07), 14, 0, 0, 4);
+}
+.pay-toolbar-label { -fx-text-fill: -accent; -fx-font-size: 12px; -fx-font-weight: 800; }
+
+.pay-combo, .pay-date {
+    -fx-background-color: #f1f5f9;
+    -fx-background-radius: 10;
+    -fx-border-color: -line;
+    -fx-border-radius: 10;
+    -fx-border-width: 1.5;
+    -fx-padding: 2 4 2 4;
+    -fx-cursor: hand;
+    -fx-pref-height: 36;
+}
+.pay-combo:focused, .pay-date:focused {
+    -fx-background-color: white;
+    -fx-border-color: -accent;
+    -fx-effect: dropshadow(gaussian, rgba(13, 148, 136, 0.30), 10, 0.1, 0, 0);
+}
+.pay-combo .list-cell {
+    -fx-background-color: transparent;
+    -fx-text-fill: -ink;
+    -fx-font-weight: 700;
+    -fx-font-size: 13px;
+}
+.pay-combo .arrow-button { -fx-background-color: transparent; }
+.pay-combo .arrow        { -fx-background-color: -accent; }
+
+.pay-list-cell {
+    -fx-background-color: white;
+    -fx-text-fill: #0f172a;
+    -fx-font-size: 13px;
+    -fx-font-weight: 600;
+    -fx-padding: 9 14 9 14;
+}
+.pay-list-cell:hover,
+.pay-list-cell:focused { -fx-background-color: #ccfbf1; -fx-text-fill: #022c22; }
+.pay-list-cell:selected { -fx-background-color: #0d9488; -fx-text-fill: white; }
+
+.pay-btn-primary {
+    -fx-background-color: linear-gradient(to right, -accent, -accent-dark);
+    -fx-text-fill: white;
+    -fx-background-radius: 10;
+    -fx-padding: 9 16 9 16;
+    -fx-font-size: 13px;
+    -fx-font-weight: 700;
+    -fx-cursor: hand;
+    -fx-effect: dropshadow(gaussian, rgba(13, 148, 136, 0.35), 10, 0.1, 0, 3);
+}
+.pay-btn-primary:hover { -fx-background-color: linear-gradient(to right, #0f766e, #065f46); -fx-translate-y: -1; }
+
+.pay-btn-secondary {
+    -fx-background-color: #f1f5f9;
+    -fx-text-fill: -ink;
+    -fx-background-radius: 10;
+    -fx-border-color: -line;
+    -fx-border-radius: 10;
+    -fx-padding: 9 16 9 16;
+    -fx-font-size: 13px;
+    -fx-font-weight: 700;
+    -fx-cursor: hand;
+}
+.pay-btn-secondary:hover { -fx-background-color: -accent-soft; -fx-border-color: -accent; -fx-text-fill: #022c22; }
+
+.pay-btn-danger {
+    -fx-background-color: transparent;
+    -fx-text-fill: #b91c1c;
+    -fx-background-radius: 10;
+    -fx-border-color: #fecaca;
+    -fx-border-radius: 10;
+    -fx-border-width: 1.5;
+    -fx-padding: 9 16 9 16;
+    -fx-font-size: 13px;
+    -fx-font-weight: 700;
+    -fx-cursor: hand;
+}
+.pay-btn-danger:hover { -fx-background-color: #fef2f2; -fx-border-color: #ef4444; }
+
+.pay-btn-primary:disabled,
+.pay-btn-secondary:disabled,
+.pay-btn-danger:disabled { -fx-opacity: 0.45; }
+
+.pay-table-card {
+    -fx-background-color: white;
+    -fx-background-radius: 14;
+    -fx-effect: dropshadow(gaussian, rgba(15, 23, 42, 0.09), 16, 0, 0, 5);
+}
+.pay-table {
+    -fx-background-color: white;
+    -fx-background-insets: 0;
+    -fx-padding: 0;
+    -fx-table-cell-border-color: transparent;
+}
+.pay-table .column-header-background {
+    -fx-background-color: linear-gradient(to right, #022c22, #065f46 55%, #0d9488);
+    -fx-background-insets: 0;
+    -fx-padding: 0;
+    -fx-pref-height: 48;
+    -fx-min-height: 48;
+}
+.pay-table .column-header,
+.pay-table .filler {
+    -fx-background-color: transparent;
+    -fx-background-insets: 0;
+    -fx-size: 48;
+    -fx-padding: 0 14 0 14;
+    -fx-border-color: transparent rgba(255, 255, 255, 0.18) transparent transparent;
+    -fx-border-width: 0 1 0 0;
+}
+.pay-table .column-header:hover { -fx-background-color: rgba(255, 255, 255, 0.12); }
+.pay-table .column-header .label {
+    -fx-text-fill: white;
+    -fx-font-size: 12.5px;
+    -fx-font-weight: 800;
+    -fx-alignment: CENTER-LEFT;
+}
+.pay-table .show-hide-columns-button { -fx-background-color: transparent; }
+
+.pay-table .table-row-cell {
+    -fx-background-color: white;
+    -fx-background-insets: 0;
+    -fx-cell-size: 46;
+    -fx-border-color: transparent transparent #e6eef0 transparent;
+    -fx-border-width: 0 0 1 0;
+}
+.pay-table .table-row-cell:odd { -fx-background-color: #f0fdfa; }
+.pay-table .table-row-cell:filled:hover { -fx-background-color: #ccfbf1; }
+.pay-table .table-row-cell:filled:selected,
+.pay-table:focused .table-row-cell:filled:selected {
+    -fx-background-color: #99f6e4;
+    -fx-border-color: transparent transparent #5eead4 transparent;
+}
+.pay-table .table-cell {
+    -fx-text-fill: #0f172a;
+    -fx-font-size: 13px;
+    -fx-alignment: CENTER-LEFT;
+    -fx-padding: 0 14 0 14;
+    -fx-border-color: transparent #e6eef0 transparent transparent;
+    -fx-border-width: 0 1 0 0;
+}
+.pay-table .table-row-cell:filled:selected .table-cell,
+.pay-table:focused .table-row-cell:filled:selected .table-cell,
+.pay-table .table-cell:selected {
+    -fx-text-fill: #022c22;
+    -fx-background-color: transparent;
+}
+.pay-table .table-cell.pay-col-id {
+    -fx-text-fill: #0d9488;
+    -fx-font-weight: 800;
+}
+.pay-empty { -fx-text-fill: -muted; -fx-font-size: 14px; -fx-font-weight: 600; }
+
+.pay-table .scroll-bar { -fx-background-color: transparent; }
+.pay-table .scroll-bar:vertical   { -fx-pref-width: 10; }
+.pay-table .scroll-bar:horizontal { -fx-pref-height: 10; }
+.pay-table .scroll-bar .thumb { -fx-background-color: #5eead4; -fx-background-radius: 6; }
+.pay-table .scroll-bar .thumb:hover { -fx-background-color: #0d9488; }
+.pay-table .scroll-bar .track { -fx-background-color: transparent; }
+.pay-table .scroll-bar .increment-button,
+.pay-table .scroll-bar .decrement-button { -fx-padding: 0; -fx-background-color: transparent; }
+.pay-table .scroll-bar .increment-arrow,
+.pay-table .scroll-bar .decrement-arrow { -fx-padding: 0; -fx-shape: " "; }
+
+.pay-badge {
+    -fx-background-radius: 20;
+    -fx-padding: 4 12 4 12;
+    -fx-font-size: 11px;
+    -fx-font-weight: 800;
+}
+.pay-badge-green  { -fx-background-color: #d1fae5; -fx-text-fill: #065f46; }
+.pay-badge-amber  { -fx-background-color: #fef3c7; -fx-text-fill: #92400e; }
+.pay-badge-red    { -fx-background-color: #fee2e2; -fx-text-fill: #991b1b; }
+.pay-badge-slate  { -fx-background-color: #e2e8f0; -fx-text-fill: #334155; }
+.pay-badge-teal   { -fx-background-color: #ccfbf1; -fx-text-fill: #115e59; }

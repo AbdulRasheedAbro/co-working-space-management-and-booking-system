@@ -1,0 +1,175 @@
+/* ============================================================
+   TIME Co-working — Dashboard (Emerald theme, same as login.css)
+   Place at: src/main/resources/css/dashboard.css
+   ============================================================ */
+
+.dash-root {
+    /* ── Theme variables (identical to login.css) ── */
+    -brand-dark:    #022c22;
+    -brand-mid:     #065f46;
+    -brand-light:   #0d9488;
+    -accent:        #0d9488;
+    -accent-dark:   #047857;
+    -accent-soft:   #ccfbf1;
+    -gold:          #fbbf24;
+    -ink:           #0f172a;
+    -muted:         #64748b;
+    -surface:       #ffffff;
+    -field:         #f1f5f9;
+    -line:          #e2e8f0;
+
+    -fx-background-color: -surface;
+    -fx-font-family: "Segoe UI", "Inter", "Helvetica Neue", Arial, sans-serif;
+}
+
+.dash-error {
+    -fx-text-fill: #b91c1c;
+    -fx-font-size: 13px;
+    -fx-font-weight: 700;
+}
+
+/* ───────────── Hero banner (same as login brand panel) ───────────── */
+
+.dash-hero {
+    -fx-background-color: linear-gradient(from 0% 0% to 100% 100%, -brand-dark 0%, -brand-mid 55%, -brand-light 100%);
+    -fx-background-radius: 16;
+    -fx-effect: dropshadow(gaussian, rgba(2, 44, 34, 0.30), 18, 0.1, 0, 6);
+}
+
+.hero-content {
+    -fx-padding: 0 32 0 32;
+}
+
+.brand-circle {
+    -fx-fill: rgba(255, 255, 255, 0.07);
+}
+
+.brand-circle-gold {
+    -fx-fill: rgba(251, 191, 36, 0.30);
+}
+
+.hero-greeting {
+    -fx-text-fill: -gold;
+    -fx-font-size: 12px;
+    -fx-font-weight: 800;
+}
+
+.hero-headline {
+    -fx-text-fill: white;
+    -fx-font-size: 29px;
+    -fx-font-weight: 800;
+}
+
+.hero-subtitle {
+    -fx-text-fill: rgba(255, 255, 255, 0.78);
+    -fx-font-size: 14px;
+}
+
+/* Live clock chip (identical to login) */
+.clock-chip {
+    -fx-background-color: rgba(255, 255, 255, 0.12);
+    -fx-background-radius: 20;
+    -fx-border-color: rgba(255, 255, 255, 0.22);
+    -fx-border-radius: 20;
+    -fx-padding: 6 14 6 12;
+}
+
+.live-dot {
+    -fx-fill: #4ade80;
+    -fx-effect: dropshadow(gaussian, #4ade80, 8, 0.4, 0, 0);
+}
+
+.clock-text {
+    -fx-text-fill: rgba(255, 255, 255, 0.90);
+    -fx-font-size: 12px;
+    -fx-font-weight: 600;
+}
+
+/* ───────────── KPI cards ───────────── */
+
+.kpi-card {
+    -fx-background-color: -surface;
+    -fx-background-radius: 16;
+    -fx-border-color: -line;
+    -fx-border-radius: 16;
+    -fx-border-width: 1.5;
+    -fx-padding: 18 20 16 20;
+    -fx-effect: dropshadow(gaussian, rgba(15, 23, 42, 0.06), 12, 0.05, 0, 3);
+}
+
+.kpi-card:hover {
+    -fx-border-color: -accent;
+    -fx-effect: dropshadow(gaussian, rgba(13, 148, 136, 0.30), 16, 0.1, 0, 6);
+    -fx-translate-y: -2;
+}
+
+.kpi-icon {
+    -fx-background-radius: 12;
+}
+
+.kpi-label {
+    -fx-text-fill: -muted;
+    -fx-font-size: 11px;
+    -fx-font-weight: 800;
+}
+
+.kpi-value {
+    -fx-text-fill: -ink;
+    -fx-font-size: 30px;
+    -fx-font-weight: 800;
+}
+
+.kpi-hint {
+    -fx-text-fill: -muted;
+    -fx-font-size: 13px;
+}
+
+.kpi-tag {
+    -fx-background-radius: 20;
+    -fx-padding: 3 12 3 12;
+    -fx-font-size: 11px;
+    -fx-font-weight: 700;
+}
+
+/* Tones — all built from the login palette */
+.tone-emerald .kpi-icon { -fx-background-color: rgba(13, 148, 136, 0.14); }
+.tone-emerald .kpi-dot  { -fx-fill: -accent; }
+.tone-emerald .kpi-tag  { -fx-background-color: -accent-soft; -fx-text-fill: -accent-dark; }
+
+.tone-dark .kpi-icon { -fx-background-color: rgba(6, 95, 70, 0.14); }
+.tone-dark .kpi-dot  { -fx-fill: -brand-mid; }
+.tone-dark .kpi-tag  { -fx-background-color: #d1fae5; -fx-text-fill: -brand-mid; }
+
+.tone-teal .kpi-icon { -fx-background-color: rgba(4, 120, 87, 0.14); }
+.tone-teal .kpi-dot  { -fx-fill: -accent-dark; }
+.tone-teal .kpi-tag  { -fx-background-color: -field; -fx-text-fill: -accent-dark; }
+
+.tone-gold .kpi-icon { -fx-background-color: rgba(251, 191, 36, 0.22); }
+.tone-gold .kpi-dot  { -fx-fill: -gold; }
+.tone-gold .kpi-tag  { -fx-background-color: #fef3c7; -fx-text-fill: #92400e; }
+
+/* ───────────── Status strip ───────────── */
+
+.status-strip {
+    -fx-background-color: -surface;
+    -fx-background-radius: 14;
+    -fx-border-color: -line;
+    -fx-border-radius: 14;
+    -fx-border-width: 1.5;
+    -fx-padding: 14 22 14 22;
+}
+
+.status-dot-live { -fx-fill: #4ade80; }
+.status-dot-warn { -fx-fill: -gold; }
+.status-dot-bad  { -fx-fill: #ef4444; }
+
+.status-label {
+    -fx-text-fill: -ink;
+    -fx-font-size: 13px;
+    -fx-font-weight: 700;
+}
+
+.status-value {
+    -fx-text-fill: -muted;
+    -fx-font-size: 13px;
+}

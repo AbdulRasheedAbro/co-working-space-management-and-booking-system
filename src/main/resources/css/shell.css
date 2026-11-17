@@ -1,0 +1,172 @@
+/* ============================================================
+   TIME Co-working — App shell (sidebar + topbar), Emerald theme
+   Place at: src/main/resources/css/shell.css
+   Variables are identical to login.css.
+   ============================================================ */
+
+.shell-root {
+    -brand-dark:    #022c22;
+    -brand-mid:     #065f46;
+    -brand-light:   #0d9488;
+    -accent:        #0d9488;
+    -accent-dark:   #047857;
+    -accent-soft:   #ccfbf1;
+    -gold:          #fbbf24;
+    -ink:           #0f172a;
+    -muted:         #64748b;
+    -surface:       #ffffff;
+    -field:         #f1f5f9;
+    -line:          #e2e8f0;
+
+    -fx-background-color: -surface;
+    -fx-font-family: "Segoe UI", "Inter", "Helvetica Neue", Arial, sans-serif;
+}
+
+/* ───────────── Sidebar ───────────── */
+
+.sidebar {
+    -fx-background-color: linear-gradient(from 0% 0% to 100% 100%, -brand-dark 0%, -brand-mid 55%, -brand-light 100%);
+    -fx-padding: 24 14 18 14;
+}
+
+.sidebar-brand {
+    -fx-padding: 0 6 18 6;
+}
+
+.brand-logo {
+    -fx-background-color: linear-gradient(from 0% 0% to 100% 100%, #fde68a, -gold);
+    -fx-background-radius: 14;
+    -fx-min-width: 42;
+    -fx-min-height: 42;
+    -fx-pref-width: 42;
+    -fx-pref-height: 42;
+    -fx-max-width: 42;
+    -fx-max-height: 42;
+    -fx-effect: dropshadow(gaussian, rgba(251, 191, 36, 0.45), 18, 0.1, 0, 4);
+}
+
+.brand-logo-text {
+    -fx-text-fill: -brand-dark;
+    -fx-font-size: 22px;
+    -fx-font-weight: 900;
+}
+
+.brand-name {
+    -fx-text-fill: white;
+    -fx-font-size: 16px;
+    -fx-font-weight: 700;
+}
+
+.sidebar-section {
+    -fx-text-fill: rgba(255, 255, 255, 0.50);
+    -fx-font-size: 11px;
+    -fx-font-weight: 800;
+    -fx-padding: 6 0 4 10;
+}
+
+.sidebar .separator .line {
+    -fx-border-color: rgba(255, 255, 255, 0.12);
+    -fx-border-width: 1 0 0 0;
+}
+
+.sidebar .separator {
+    -fx-padding: 8 0 4 0;
+}
+
+.nav-button {
+    -fx-background-color: transparent;
+    -fx-background-radius: 12;
+    -fx-border-color: transparent;
+    -fx-border-radius: 12;
+    -fx-text-fill: rgba(255, 255, 255, 0.85);
+    -fx-font-size: 13.5px;
+    -fx-font-weight: 600;
+    -fx-padding: 11 14 11 14;
+    -fx-cursor: hand;
+}
+
+.nav-button:hover {
+    -fx-background-color: rgba(255, 255, 255, 0.10);
+    -fx-border-color: rgba(255, 255, 255, 0.10);
+    -fx-text-fill: white;
+}
+
+.nav-button:focused {
+    -fx-background-insets: 0;
+}
+
+.nav-button.nav-active {
+    -fx-background-color: rgba(251, 191, 36, 0.18);
+    -fx-border-color: rgba(251, 191, 36, 0.55);
+    -fx-text-fill: white;
+    -fx-font-weight: 800;
+}
+
+.brand-footer {
+    -fx-text-fill: rgba(255, 255, 255, 0.60);
+    -fx-font-size: 12px;
+    -fx-padding: 8 0 0 8;
+}
+
+/* ───────────── Topbar ───────────── */
+
+.topbar {
+    -fx-background-color: -surface;
+    -fx-border-color: -line;
+    -fx-border-width: 0 0 1.5 0;
+    -fx-padding: 14 24 14 24;
+}
+
+.topbar-title {
+    -fx-text-fill: -ink;
+    -fx-font-size: 20px;
+    -fx-font-weight: 800;
+}
+
+.user-chip {
+    -fx-background-color: -field;
+    -fx-background-radius: 20;
+    -fx-border-color: -line;
+    -fx-border-radius: 20;
+    -fx-text-fill: -ink;
+    -fx-font-size: 12.5px;
+    -fx-font-weight: 600;
+    -fx-padding: 7 14 7 14;
+}
+
+.logout-button {
+    -fx-background-color: linear-gradient(to right, -accent, -accent-dark);
+    -fx-background-radius: 12;
+    -fx-text-fill: white;
+    -fx-font-size: 13px;
+    -fx-font-weight: 700;
+    -fx-padding: 8 18 8 18;
+    -fx-cursor: hand;
+    -fx-effect: dropshadow(gaussian, rgba(13, 148, 136, 0.35), 12, 0.1, 0, 4);
+}
+
+.logout-button:hover {
+    -fx-background-color: linear-gradient(to right, #0f766e, #065f46);
+    -fx-translate-y: -1;
+}
+
+.logout-button:pressed {
+    -fx-translate-y: 1;
+}
+
+/* ───────────── Content area ───────────── */
+
+.content-area {
+    -fx-background-color: -surface;
+}
+
+.content-scroll,
+.content-scroll > .viewport {
+    -fx-background-color: transparent;
+    -fx-background: transparent;
+}
+
+.content-scroll {
+    -fx-padding: 0;
+    -fx-border-width: 0;
+}
